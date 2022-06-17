@@ -1,0 +1,23 @@
+{
+  "name": "geosoft_task6",
+  "version": "1.0.0",
+  "description": "this is our server for geosoftware task 6 lg luca und darian",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ECAttorney/Geosoft_Task6.git"
+  },
+  "author": "Luca Erich Otto Hesse, Darian Elias Weiß",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ECAttorney/Geosoft_Task6/issues"
+  },
+  "homepage": "https://github.com/ECAttorney/Geosoft_Task6#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
