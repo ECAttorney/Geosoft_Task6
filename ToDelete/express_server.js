@@ -8,10 +8,13 @@ var displayRouter = require('./routes/display')
 const app = express()
 const port = 3000 // unsafe ports: https://superuser.com/questions/188058/which-ports-are-considered-unsafe-by-chrome 
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 app.use('/add', addRouter)
-app.use('/delete', deleteRouter)
-app.use('/display', displayRouter)
-/* // Middleware
+
+//app.use('/delete', deleteRouter)
+//app.use('/display', displayRouter)
+ // Middleware
 var myLogger = function (req, res, next) 
 {
   console.log('LOGGED')
@@ -24,8 +27,9 @@ var mySecondLogger = function (req, res, next)
 }
 app.use(mySecondLogger)
 app.use(myLogger)
-*/
 
+
+/**
 // define a route
 // function taken from https://expressjs.com/de/starter/hello-world.html
 app.get('/', (req, res) => 
@@ -37,9 +41,11 @@ app.get('/', (req, res) =>
 
 app.get('/add', (req, res) => 
 {
-  res.send('add World')
+  
+
   //res.set('Content-Type', 'text/html');
-  //res.sendFile(path.join(__dirname, '/public', 'example06.html'))
+  //res.sendFile(path.join(__dirname, 'Impressum.html'))
+  res.send('add World')
 })
 
 app.get('/display', (req, res) => 
@@ -49,12 +55,16 @@ app.get('/display', (req, res) =>
   //res.sendFile(path.join(__dirname, '/public', 'example06.html'))
 })
 
+
 app.get('/delete', (req, res) => 
 {
   res.send('delete World')
   //res.set('Content-Type', 'text/html');
   //res.sendFile(path.join(__dirname, '/public', 'example06.html'))
 })
+
+*/
+
 // serve static files
 // function taken from https://expressjs.com/de/starter/static-files.html 
 //app.use(express.static('public'))
