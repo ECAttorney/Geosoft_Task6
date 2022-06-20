@@ -42,7 +42,10 @@ async function removePOIfromDB(client, dbName, collectionName, poi, res)
   const collection = db.collection(collectionName)
     console.log(poi.pname)
 
-  collection.remove({'poiname': poi.pname})
+  collection.deleteOne({'poiname': poi.pname})
+ 
+  console.log("1 document deleted")
+
   console.log("poi removed from the database")
 
   // pass the data added as input for the notification page
