@@ -1,9 +1,9 @@
 const express = require('express')
 const path = require('path')
 
-var addRouter = require('./routes/add')
-var deleteRouter = require('./routes/delete')
-var displayRouter = require('./routes/display')
+var addRouter = require('../neu2/routes/add')
+var deleteRouter = require('../neu2/routes/delete')
+var displayRouter = require('../neu2/routes/display')
 
 const app = express()
 const port = 3000 // unsafe ports: https://superuser.com/questions/188058/which-ports-are-considered-unsafe-by-chrome 
