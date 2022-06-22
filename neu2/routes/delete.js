@@ -7,7 +7,7 @@ const client = new MongoClient(url) // mongodb client
 const dbName = 'mydatabase' // database name
 const collectionName = 'newpois' // collection name
 
-/* Addition home page. */ 
+/* Addition home page. */
 router.get('/', function(req, res, next) 
 {
   res.render('delete', { title: 'DESTRUCTION Page' });
