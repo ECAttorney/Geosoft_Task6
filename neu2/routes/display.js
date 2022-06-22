@@ -47,7 +47,7 @@ async function displayPOIfromDB(client, dbName, collectionName, poi, res)
 
   console.log("poi removed from the database")
 
-  // pass the data added as input for the notification page
+  // pass the data added as input for the notification page 
  res.render('display_notification', {title: "Display Completed", newpoi: poi})
 
 }
