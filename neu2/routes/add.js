@@ -19,7 +19,6 @@ router.post('/newpoi', function(req, res, next)
   console.log("A new poi has been added through the user interface")
 
  console.log(req) // show the data that has been passed through the post query
- console.log("IT works")
   let poi = {}
   poi.poiname = req.body.pname
   poi.coordinates = req.body.longlat

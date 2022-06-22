@@ -19,7 +19,7 @@ router.delete('/deletepoi', function(req, res, next)
   console.log("A poi has been removed through the user interface")
 
  //console.log(req) // show the data that has been passed through the post query
- console.log("IT works")
+  console.log("IT works")
   let poi = {}
   poi.poiname = req.body.pname
   poi.coordinates = req.body.longlat
@@ -49,7 +49,7 @@ async function removePOIfromDB(client, dbName, collectionName, poi, res)
   console.log("poi removed from the database")
 
   // pass the data added as input for the notification page
- // res.render('add_notification', {title: "Removal Completed", newpoi: poi})
+ res.render('delete_notification', {title: "Removal Completed", newpoi: poi})
 
 }
 
